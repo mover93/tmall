@@ -13,6 +13,7 @@
         <module>order</module>
         <module>registry</module>
         <module>common</module>
+        <module>code-generator</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -31,6 +32,7 @@
         <mysql.version>5.1.47</mysql.version>
         <mybatis-plus.version>3.4.0</mybatis-plus.version>
         <hutool.version>5.4.2</hutool.version>
+        <velocity.version>2.2</velocity.version>
     </properties>
 
     <dependencyManagement>
@@ -94,6 +96,20 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- mybatis-plus-generator -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- velocity-engine -->
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>${velocity.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
