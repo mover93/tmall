@@ -12,6 +12,7 @@
         <module>goods</module>
         <module>order</module>
         <module>registry</module>
+        <module>common</module>
     </modules>
 
     <packaging>pom</packaging>
