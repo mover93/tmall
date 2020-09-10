@@ -1,6 +1,6 @@
 package com.chenming.tmall.user.service;
 
-import com.chenming.tmall.user.entity.LogModified;
+import com.chenming.tmall.user.entity.UserLogModified;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author chenming
  * @since 2020-09-10
  */
-public interface ILogModifiedService extends IService<LogModified> {
+public interface IUserLogModifiedService extends IService<UserLogModified> {
 
 }

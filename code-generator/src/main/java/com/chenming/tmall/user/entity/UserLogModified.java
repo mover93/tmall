@@ -1,10 +1,10 @@
 package com.chenming.tmall.user.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
-import java.time.LocalDateTime;
-import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -16,8 +16,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("user_log_modified")
-public class LogModified implements Serializable {
+public class UserLogModified implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
