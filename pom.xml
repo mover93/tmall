@@ -9,8 +9,6 @@
     <version>1.0</version>
 
     <modules>
-        <module>goods</module>
-        <module>order</module>
         <module>registry</module>
         <module>common</module>
         <module>code-generator</module>

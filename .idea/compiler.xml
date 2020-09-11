@@ -10,9 +10,7 @@
         <module name="code-generator" />
         <module name="user-boot" />
         <module name="common" />
-        <module name="order" />
         <module name="registry" />
-        <module name="goods" />
         <module name="user-service" />
         <module name="user-feign" />
         <module name="education-user" />
@@ -20,6 +18,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="education-user" target="1.8" />
+      <module name="goods" target="1.8" />
+      <module name="order" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

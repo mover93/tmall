@@ -4,10 +4,6 @@
     <file url="file://$PROJECT_DIR$/code-generator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/code-generator/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/goods/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/goods/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/order/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/order/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/registry/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/registry/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-parent/user-boot/src/main/java" charset="UTF-8" />
