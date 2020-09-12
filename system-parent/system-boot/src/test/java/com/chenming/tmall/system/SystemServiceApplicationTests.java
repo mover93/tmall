@@ -1,7 +1,11 @@
 package com.chenming.tmall.system;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.chenming.tmall.system.entity.Sys;
+import com.chenming.tmall.system.manager.SysManager;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -15,7 +19,18 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class SystemServiceApplicationTests {
 
+    @Autowired
+    private SysManager sysManager;
+
     @Test
     public void contextLoads() {
+    }
+
+    @Test
+    public void testQuerySysById() {
+        QueryWrapper<Sys> qw = new QueryWrapper<>();
+        qw.eq("id", "1");
+        Sys sys = sysManager.getOne(qw);
+        System.out.println(sys);
     }
 }

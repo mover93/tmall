@@ -1,5 +1,6 @@
 package com.chenming.tmall.system;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * date: 2020/9/12 9:51 <br>
  * version: 1.0 <br>
  */
+@MapperScan(value = "com.chenming.tmall.system.mapper")
 @SpringBootApplication
 public class SystemServiceApplication {
 
