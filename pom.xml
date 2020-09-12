@@ -13,6 +13,7 @@
         <module>common</module>
         <module>code-generator</module>
         <module>user-parent</module>
+        <module>system-parent</module>
     </modules>
 
     <packaging>pom</packaging>
