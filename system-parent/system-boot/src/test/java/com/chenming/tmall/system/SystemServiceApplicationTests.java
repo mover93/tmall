@@ -1,7 +1,10 @@
 package com.chenming.tmall.system;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.chenming.tmall.common.result.CommonResult;
+import com.chenming.tmall.common.vo.user.UserVo;
 import com.chenming.tmall.system.entity.Sys;
+import com.chenming.tmall.system.feign.UserClient;
 import com.chenming.tmall.system.manager.SysManager;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,6 +25,9 @@ public class SystemServiceApplicationTests {
     @Autowired
     private SysManager sysManager;
 
+    @Autowired
+    private UserClient userClient;
+
     @Test
     public void contextLoads() {
     }
@@ -32,5 +38,11 @@ public class SystemServiceApplicationTests {
         qw.eq("id", "1");
         Sys sys = sysManager.getOne(qw);
         System.out.println(sys);
+    }
+
+    @Test
+    public void testGetUserById() {
+        CommonResult<UserVo> commonResult = userClient.getUserById(1L);
+        System.out.println(commonResult);
     }
 }
