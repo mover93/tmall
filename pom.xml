@@ -9,11 +9,12 @@
     <version>1.0</version>
 
     <modules>
-        <module>registry</module>
         <module>common</module>
         <module>code-generator</module>
         <module>user-parent</module>
         <module>system-parent</module>
+        <module>eureka-service</module>
+        <module>zuul-service</module>
     </modules>
 
     <packaging>pom</packaging>

@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/education-user/pom.xml" />
         <option value="$PROJECT_DIR$/goods/pom.xml" />
         <option value="$PROJECT_DIR$/order/pom.xml" />
+        <option value="$PROJECT_DIR$/registry/pom.xml" />
         <option value="$PROJECT_DIR$/user-feign/pom.xml" />
       </set>
     </option>

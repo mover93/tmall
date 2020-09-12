@@ -8,21 +8,23 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="system-boot" />
+        <module name="education-user" />
         <module name="code-generator" />
         <module name="user-boot" />
         <module name="common" />
         <module name="system-feign" />
-        <module name="registry" />
-        <module name="user-feign" />
+        <module name="eureka-service" />
         <module name="user-service" />
         <module name="system-service" />
-        <module name="education-user" />
+        <module name="zuul-service" />
+        <module name="user-feign" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="education-user" target="1.8" />
       <module name="goods" target="1.8" />
       <module name="order" target="1.8" />
+      <module name="registry" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
