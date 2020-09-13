@@ -33,7 +33,7 @@ public class UserPlatformServiceTests {
         dto.setUserDto(userDto);
 
         PlatformDto platformDto = new PlatformDto();
-        platformDto.setClientName("浩鲸科技");
+        platformDto.setClientName("ceshi");
         dto.setPlatformDto(platformDto);
 
         userPlatformService.process(dto);
