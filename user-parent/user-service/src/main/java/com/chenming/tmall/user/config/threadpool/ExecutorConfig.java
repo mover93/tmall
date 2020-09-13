@@ -1,5 +1,6 @@
 package com.chenming.tmall.user.config.threadpool;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +15,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * version: 1.0 <br>
  */
 @Configuration
+@Slf4j
 public class ExecutorConfig {
 
     @Value("${threadpool.corePoolSize:10}")
@@ -43,8 +45,11 @@ public class ExecutorConfig {
                 new ThreadFactoryImpl("user-service-threadpool-"),
                 handler);
 
+        log.info("user-service-threadpool inited");
+
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             if (!executorService.isShutdown()) {
+                log.info("user-service-threadpool is shutdowned");
                 executorService.shutdown();
             }
         }));

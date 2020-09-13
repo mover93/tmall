@@ -1,6 +1,6 @@
 package com.chenming.tmall.user.service;
 
-import com.chenming.tmall.common.result.CommonResult;
+import com.chenming.tmall.common.dto.user.UserDto;
 import com.chenming.tmall.common.vo.user.UserVo;
 
 /**
@@ -11,5 +11,17 @@ import com.chenming.tmall.common.vo.user.UserVo;
  */
 public interface UserService {
 
-    CommonResult<UserVo> getUserById(Long id);
+    /**
+     * 根据id返回用户
+     * @param id
+     * @return
+     */
+    UserVo getUserById(Long id);
+
+    /**
+     * 新增用户
+     * @param userDto
+     * @return
+     */
+    boolean addUser(UserDto userDto);
 }

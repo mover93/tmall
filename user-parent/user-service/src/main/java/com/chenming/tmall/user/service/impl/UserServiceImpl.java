@@ -1,6 +1,6 @@
 package com.chenming.tmall.user.service.impl;
 
-import com.chenming.tmall.common.result.CommonResult;
+import com.chenming.tmall.common.dto.user.UserDto;
 import com.chenming.tmall.common.vo.user.UserVo;
 import com.chenming.tmall.user.entity.User;
 import com.chenming.tmall.user.manager.UserManager;
@@ -8,6 +8,8 @@ import com.chenming.tmall.user.service.UserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
 
 /**
  * description: UserServiceImpl <br>
@@ -22,10 +24,19 @@ public class UserServiceImpl implements UserService {
     private UserManager userManager;
 
     @Override
-    public CommonResult<UserVo> getUserById(Long id) {
+    public UserVo getUserById(Long id) {
         User user = userManager.getById(id);
         UserVo userVo = new UserVo();
         BeanUtils.copyProperties(user, userVo);
-        return CommonResult.success(userVo);
+        return userVo;
+    }
+
+    @Override
+    public boolean addUser(UserDto userDto) {
+        User user = new User();
+        BeanUtils.copyProperties(userDto, user);
+        user.setGmtCreate(LocalDateTime.now());
+        user.setStatusId(1);
+        return userManager.save(user);
     }
 }

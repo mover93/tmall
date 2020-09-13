@@ -22,6 +22,6 @@ public class UserController {
 
     @GetMapping(value = "/user/{id}")
     public CommonResult<UserVo> getUserById(@PathVariable(value = "id") Long id) {
-        return userService.getUserById(id);
+        return CommonResult.success(userService.getUserById(id));
     }
 }
