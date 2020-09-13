@@ -27,3 +27,13 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/
+
+threadpool:
+  #核心线程数
+  corePoolSize: 10
+  #最大线程数
+  maximumPoolSize: 30
+  #线程存活时间（毫秒）
+  keepAliveTime: 3000
+  #工作线程队列大小
+  workQueueSize: 10000

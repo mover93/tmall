@@ -1,7 +1,6 @@
 package com.chenming.tmall.common.vo.user;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
