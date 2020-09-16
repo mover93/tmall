@@ -36,6 +36,7 @@
         <velocity.version>2.2</velocity.version>
         <common.version>1.0</common.version>
         <fastjson.version>1.2.73</fastjson.version>
+        <jedis.version>3.3.0</jedis.version>
     </properties>
 
     <dependencyManagement>
@@ -45,6 +46,12 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+            <!-- jedis -->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
             </dependency>
             <!-- common -->
             <dependency>
