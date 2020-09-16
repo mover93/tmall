@@ -3,9 +3,13 @@ package com.chenming.tmall.user;
 import com.chenming.tmall.user.util.RedisUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * description: RedisUtilsTests <br>
@@ -19,6 +23,9 @@ public class RedisUtilsTests {
 
     @Autowired
     private RedisUtils redisUtils;
+
+    @Autowired
+    private RedissonClient redissonClient;
 
     @Test
     public void testPut() {
@@ -34,5 +41,42 @@ public class RedisUtilsTests {
     public void testGet() {
         String value = redisUtils.get("user:id:1");
         System.out.println(value);
+    }
+
+    @Test
+    public void testLock() {
+        // 1、通用用法
+//        RLock lock = redissonClient.getLock("anyLock");
+//        lock.lock();
+//
+//        try {
+//            Thread.sleep(50000);
+//        } catch (InterruptedException e) {
+//            // ignore
+//        } finally {
+//            lock.unlock();
+//        }
+
+        // 2、尝试加锁
+
+        // 尝试加锁，最多等待100秒，上锁以后10秒自动解锁
+        RLock lock = redissonClient.getLock("anyLock");
+
+        try {
+            boolean flag = lock.tryLock(100, 30, TimeUnit.SECONDS);
+
+            if (flag) {
+                //
+                Thread.sleep(10000);
+            }
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            if (lock != null && lock.isHeldByCurrentThread()) {
+                lock.unlock();
+            }
+        }
+
+
     }
 }

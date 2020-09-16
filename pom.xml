@@ -37,6 +37,7 @@
         <common.version>1.0</common.version>
         <fastjson.version>1.2.73</fastjson.version>
         <jedis.version>3.3.0</jedis.version>
+        <redisson.version>3.13.4</redisson.version>
     </properties>
 
     <dependencyManagement>
@@ -52,6 +53,12 @@
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>${jedis.version}</version>
+            </dependency>
+            <!-- redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
             </dependency>
             <!-- common -->
             <dependency>
