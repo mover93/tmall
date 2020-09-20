@@ -27,3 +27,14 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/
+
+#####JWT配置#####
+audience:
+  # 代表这个JWT的接收对象,存入audience
+  aud: 98f6bcd4621d37
+  # 密钥, 经过Base64加密, 可自行替换。Base64加解密工具：http://tool.chinaz.com/Tools/Base64.aspx
+  base64Secret: Z3VveGl1emhpRXJiYWRhZ2FuZ1dpbnNwYWNlVjMuMA==
+  # JWT的签发主体，存入issuer
+  iss: cm
+  # 过期时间毫秒
+  expiresSecond: 172800

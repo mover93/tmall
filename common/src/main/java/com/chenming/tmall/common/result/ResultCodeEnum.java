@@ -19,6 +19,7 @@ public enum ResultCodeEnum {
     INVALID_TOKEN("101", "TOKEN无效"),
     LOST_TOKEN("102", "TOKEN缺失"),
     NOT_BINDING_WX("103", "用户未绑定"),
+    EXPIRED_TOKEN("104", "TOKEN过期"),
     SYSTEM_ERROR("500", "服务器内部错误"),
     PAGE_NOT_FOUND("404", "页面找不到"),
     PARAMTER_ERROR("400", "请求参数异常"),

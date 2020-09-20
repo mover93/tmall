@@ -16,4 +16,11 @@ public interface PlatformService {
      * @return
      */
     boolean addPlatform(PlatformDto platformDto);
+
+    /**
+     * 根据clientId判断平台是否存在
+     * @param clientId
+     * @return
+     */
+    boolean existsPlatform(String clientId);
 }

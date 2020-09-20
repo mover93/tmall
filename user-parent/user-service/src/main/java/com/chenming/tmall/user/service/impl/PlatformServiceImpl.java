@@ -1,5 +1,6 @@
 package com.chenming.tmall.user.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.chenming.tmall.common.dto.platform.PlatformDto;
 import com.chenming.tmall.user.entity.Platform;
 import com.chenming.tmall.user.manager.PlatformManager;
@@ -29,5 +30,14 @@ public class PlatformServiceImpl implements PlatformService {
         platform.setGmtCreate(LocalDateTime.now());
         platform.setStatusId(1);
         return platformManager.save(platform);
+    }
+
+    @Override
+    public boolean existsPlatform(String clientId) {
+        QueryWrapper<Platform> qw = new QueryWrapper<>();
+        qw.eq("client_id", clientId);
+        qw.eq("status_id", "1");
+        int count = platformManager.count(qw);
+        return count > 0 ? true : false;
     }
 }
